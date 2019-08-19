@@ -1,5 +1,7 @@
 # Music-Festival-Playlist-Builder
 
+This script scrapes festival lineups from the web and creates relevant Spotify playlists for anybody to listen to! You can view the festival playlists that get generated [here](https://open.spotify.com/user/7m0k6ux7waeubykapbusynvkk?si=Y6eLN6pdRXS6PsVJXaddUQ)
+
 # Install 
 
 Install relevant dependencies 
@@ -12,4 +14,8 @@ I chose to utilize a persistent layer (PostgreSQL) so that I could run the scrip
 # Running 
 
 ```python playlist_builder.py``` 
+
+This could easily be run on a scheduler to keep the playlist generation constant. 
+
+Feel free to reach out with any questions/ideas! 
 
