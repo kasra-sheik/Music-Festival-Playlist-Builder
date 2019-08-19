@@ -69,14 +69,14 @@ def is_new_festival(festival_name):
 def get_festival_lineups():
     festivals = []
 
-    festivals_page = requests.get(page, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'})
+    festivals_page = requests.get(FESTIVALS_PAGE, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'})
     soup = BeautifulSoup(festivals_page.content, 'html.parser')
 
     #this is pretty hardcodey - might want to add more robust checks in the future
     festival_elements = soup.find_all('div', {'class' : 'col-xs-10 col-sm-12'})
     
     if(festival_elements == []):
-        break
+        return festivals
 
     for festival_data in festival_elements:
         festival_name = list(festival_data.find('span').children)[0].strip()
