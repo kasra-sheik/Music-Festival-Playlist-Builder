@@ -1,0 +1,5 @@
+requests==2.22.0
+bs4==0.0.1
+spotipy==2.4.4
+edit-distance==1.0.3
+psycopg2==2.8.3
